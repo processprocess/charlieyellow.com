@@ -1,0 +1,70 @@
+.name-background-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  .name-background {
+    width: 50vw;
+    // transition: transform 0.3s;
+    // transform: rotate(-8deg);
+
+    @media (max-width: $mobile) {
+      width: 80vw;
+    }
+  }
+}
+
+.tilt-animation {
+  animation: tilt 15s infinite ease;
+
+  @keyframes tilt {
+    0% {
+      transform: rotate(-8deg);
+    }
+    50% {
+      transform: rotate(8deg);
+    }
+    100% {
+      transform: rotate(-8deg);
+    }
+  }
+}
+
+.scale-animation {
+  animation: scale 9s infinite ease;
+
+  @keyframes scale {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(0.95);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+}
+
+.squeeze-animation {
+  animation: squeeze 12s infinite ease;
+
+  @keyframes squeeze {
+    0% {
+      transform: scaleX(1);
+    }
+    48% {
+      transform: scaleX(1);
+    }
+    50% {
+      transform: scaleX(0);
+    }
+    58% {
+      transform: scaleX(1);
+    }
+    100% {
+      transform: scaleX(1);
+    }
+  }
+}
