@@ -8,7 +8,6 @@ class Footer {
 
     const copyRight = makeNode(footerNode, "copyright", "div");
     copyRight.innerHTML = `© ${leftSidetitle} ${new Date().getFullYear()}`;
-    copyRight.classList.add("link");
 
     const footerLinks = makeNode(footerNode, "footer-links", "div");
 

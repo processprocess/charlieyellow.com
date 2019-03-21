@@ -51,9 +51,6 @@ header {
       .link {
         font-size: 21px;
         margin-bottom: 10px;
-        &:last-child {
-          // margin-bottom: 0;
-        }
       }
       &.open {
         visibility: visible;
@@ -62,14 +59,8 @@ header {
   }
 }
 
-footer {
-  bottom: 0;
-}
-
-.copyright,
 a,
-span {
-  background-color: $yellow;
+.link {
   display: inline-block;
   text-decoration: underline;
 }
@@ -77,22 +68,29 @@ span {
 .right-links {
   text-align: right;
 }
-
-.footer-links {
-  .footer-link-text {
-    @media (max-width: $mobile) {
+footer {
+  bottom: 0;
+  .footer-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .footer-link-text {
+      @media (max-width: $mobile) {
+        display: none;
+      }
+    }
+    .footer-link-icon {
       display: none;
-    }
-  }
-  .footer-link-icon {
-    display: none;
-    @media (max-width: $mobile) {
-      display: block;
-    }
-    svg {
-      fill: $pink;
-      width: 16px;
-      height: 16px;
+      align-items: center;
+      justify-content: center;
+      @media (max-width: $mobile) {
+        display: flex;
+      }
+      svg {
+        fill: $pink;
+        width: 16px;
+        height: 16px;
+      }
     }
   }
 }
