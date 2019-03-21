@@ -8,7 +8,11 @@ class Modal {
   constructor() {
     this.modalWrapper = makeNode(document.body, "modal-wrapper");
     this.modalScrim = makeNode(this.modalWrapper, "modal-scrim");
-    this.modal = makeNode(this.modalWrapper, "modal");
+    this.modalScrollableContent = makeNode(
+      this.modalWrapper,
+      "modal-scrollable-content"
+    );
+    this.modal = makeNode(this.modalScrollableContent, "modal");
 
     this.closeButtonWrapper = makeNode(this.modal, "close-button-wrapper");
     this.eyeOpen = makeNode(this.closeButtonWrapper, "image", "img");

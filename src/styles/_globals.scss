@@ -1,19 +1,14 @@
-// @import url("https://fonts.googleapis.com/css?family=Catamaran:800");
 @import url("https://fonts.googleapis.com/css?family=Khula:800");
 
 body {
   margin: 0px;
-  color: $pink;
   overflow: hidden;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  // font-family: "Catamaran", sans-serif;
   font-family: "Khula", sans-serif;
-
-  // font-style: bold;
 }
 
 * {
@@ -26,6 +21,7 @@ body {
   -ms-user-select: none; /* IE10+ */
 }
 
+body,
 a,
 span {
   color: $pink;

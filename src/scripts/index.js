@@ -1,5 +1,5 @@
 import "../styles/index.scss";
-import "prevent-pull-refresh";
+// import "prevent-pull-refresh";
 const contentful = require("contentful");
 import { randomRoundInRange, makeNode, addBroswerClassNames } from "./utils";
 import ScrollingImages from "./scrolling-images/Scrolling-Images";
