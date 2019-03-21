@@ -15,6 +15,7 @@ class Header {
   initMenu() {
     const menu = makeNode(this.header, "menu", "span");
     const menuButton = makeNode(menu, "menu-button");
+    menuButton.classList.add("link");
     menuButton.textContent = "menu";
     const menuItems = makeNode(menu, "menu-items");
 

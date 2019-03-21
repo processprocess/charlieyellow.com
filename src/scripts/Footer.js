@@ -19,7 +19,7 @@ class Footer {
       },
       {
         link: instagramLink,
-        text: "intagram",
+        text: "instagram",
         icon: svgs.instagram
       },
       {

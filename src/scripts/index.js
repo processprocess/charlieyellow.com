@@ -7,7 +7,7 @@ import Header from "./Header.js";
 import Footer from "./Footer.js";
 import ColorChangingBackground from "./ColorChangingBackground";
 import setFavicon from "./setFavicon";
-import nameBackgroundContainer from "./nameBackgroundContainer";
+import nameBGContainer from "./nameBGContainer";
 import Modal from "./Modal";
 import router from "./router";
 
@@ -78,7 +78,7 @@ client.getEntries().then(entries => {
     .find(item => item.sys.id === "3gyOwqDYd0NHK6WfbUvRyU")
     .fields.nameBackgrounds.map(item => item.fields.file.url);
 
-  nameBackgroundContainer(images);
+  nameBGContainer(images);
 
   // SCROLLING IMAGES
 

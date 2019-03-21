@@ -1,14 +1,15 @@
 @import url("https://fonts.googleapis.com/css?family=Khula:800");
 
 body {
-  margin: 0px;
   overflow: hidden;
   position: fixed;
+  margin: 0px;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   font-family: "Khula", sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
 * {
