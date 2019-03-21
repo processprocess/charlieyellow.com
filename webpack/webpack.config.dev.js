@@ -11,7 +11,8 @@ module.exports = merge(common, {
     chunkFilename: "js/[name].chunk.js"
   },
   devServer: {
-    inline: true
+    inline: true,
+    historyApiFallback: true,
   },
   plugins: [
     new Webpack.DefinePlugin({
