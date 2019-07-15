@@ -15,7 +15,7 @@ var client = contentful.createClient({
   space: process.env.SPACE,
   accessToken: process.env.ACCESS_TOKEN
 });
-console.log('test');
+console.log('tst');
 
 client.getEntries().then(entries => {
   // ADD BROWSER CLASSNAMES
