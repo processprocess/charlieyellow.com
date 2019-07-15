@@ -1,20 +1,21 @@
-import "../styles/index.scss";
+import '../styles/index.scss';
 // import "prevent-pull-refresh";
-const contentful = require("contentful");
-import { randomRoundInRange, makeNode, addBroswerClassNames } from "./utils";
-import ScrollingImages from "./scrolling-images/Scrolling-Images";
-import Header from "./Header.js";
-import Footer from "./Footer.js";
-import ColorChangingBackground from "./ColorChangingBackground";
-import setFavicon from "./setFavicon";
-import nameBGContainer from "./nameBGContainer";
-import Modal from "./Modal";
-import router from "./router";
+const contentful = require('contentful');
+import { randomRoundInRange, makeNode, addBroswerClassNames } from './utils';
+import ScrollingImages from './scrolling-images/Scrolling-Images';
+import Header from './Header.js';
+import Footer from './Footer.js';
+import ColorChangingBackground from './ColorChangingBackground';
+import setFavicon from './setFavicon';
+import nameBGContainer from './nameBGContainer';
+import Modal from './Modal';
+import router from './router';
 
 var client = contentful.createClient({
   space: process.env.SPACE,
   accessToken: process.env.ACCESS_TOKEN
 });
+console.log('test');
 
 client.getEntries().then(entries => {
   // ADD BROWSER CLASSNAMES
@@ -33,10 +34,10 @@ client.getEntries().then(entries => {
   // HEADER
 
   const vimeoPosts = entries.items.filter(
-    item => item.sys.contentType.sys.id === "vimeoPosts"
+    item => item.sys.contentType.sys.id === 'vimeoPosts'
   );
   const aboutMe = entries.items.find(
-    item => item.sys.contentType.sys.id === "aboutMe"
+    item => item.sys.contentType.sys.id === 'aboutMe'
   );
   new Header({ vimeoPosts, aboutMe });
 
@@ -50,7 +51,7 @@ client.getEntries().then(entries => {
     };
   });
 
-  router.routes["/"] = {
+  router.routes['/'] = {
     modalOpen: false,
     fields: {}
   };
@@ -64,9 +65,9 @@ client.getEntries().then(entries => {
 
   const { pathname } = router.history.location;
 
-  if (pathname !== "/") {
+  if (pathname !== '/') {
     if (!router.routes[pathname]) {
-      router.history.push("");
+      router.history.push('');
     } else {
       router.updateSubscribers(pathname);
     }
@@ -75,7 +76,7 @@ client.getEntries().then(entries => {
   // NAME BACKGROUND
 
   const images = entries.items
-    .find(item => item.sys.id === "3gyOwqDYd0NHK6WfbUvRyU")
+    .find(item => item.sys.id === '3gyOwqDYd0NHK6WfbUvRyU')
     .fields.nameBackgrounds.map(item => item.fields.file.url);
 
   nameBGContainer(images);
@@ -83,7 +84,7 @@ client.getEntries().then(entries => {
   // SCROLLING IMAGES
 
   const scrollingImages = entries.items
-    .find(item => item.sys.id === "2LgwflXOW1cbQ6a0ju2LDi")
+    .find(item => item.sys.id === '2LgwflXOW1cbQ6a0ju2LDi')
     .fields.imagesToDisplay.map(item => item.fields.file.url);
 
   new ScrollingImages(document.body, scrollingImages);
@@ -91,7 +92,7 @@ client.getEntries().then(entries => {
   // FOOTER
 
   const links = entries.items.find(
-    item => item.sys.id === "3u2fnwdUeyaVxdX2xgBGqa"
+    item => item.sys.id === '3u2fnwdUeyaVxdX2xgBGqa'
   ).fields;
 
   new Footer(links);
