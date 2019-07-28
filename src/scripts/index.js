@@ -1,5 +1,4 @@
 import '../styles/index.scss';
-// import "prevent-pull-refresh";
 const contentful = require('contentful');
 import { randomRoundInRange, makeNode, addBroswerClassNames } from './utils';
 import ScrollingImages from './scrolling-images/Scrolling-Images';
@@ -11,11 +10,12 @@ import nameBGContainer from './nameBGContainer';
 import Modal from './Modal';
 import router from './router';
 
+console.log(process);
+
 var client = contentful.createClient({
   space: process.env.SPACE,
   accessToken: process.env.ACCESS_TOKEN
 });
-console.log('tst');
 
 client.getEntries().then(entries => {
   // ADD BROWSER CLASSNAMES
