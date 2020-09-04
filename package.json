@@ -31,7 +31,7 @@
     "dotenv-webpack": "^1.7.0",
     "history": "^4.9.0",
     "prevent-pull-refresh": "^1.0.4",
-    "showdown": "^1.9.0"
+    "showdown": "^1.9.1"
   },
   "scripts": {
     "build": "webpack --config webpack/webpack.config.prod.js  --colors",
