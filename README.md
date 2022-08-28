@@ -6,6 +6,6 @@ Add the following information from the charlieyellow.com contentful space api ke
 SPACE='space id'  
 ACCESS_TOKEN='access token'  
 in terminal, run:  
-'npm init' to download dependencies
+'npm i' to install dependencies
 'npm start' to run project in dev mode
 'npm build' to generate build
